@@ -33,5 +33,6 @@ int main() {
 
     // Print the properties
     getProperties(&stud1);
+    printf("\n--------------------------\n");
     getProperties(&stud2);
 }
