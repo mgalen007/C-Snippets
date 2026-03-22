@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-int factorial(int n);
+int factorial(int);
 
 int main() {
     int n;
