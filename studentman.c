@@ -18,10 +18,12 @@ struct Student create_student(char name[20], int age, char gender[6], char class
     strcpy(student.class, class);
 
     return student;
-}
+};
+
+typedef struct Student Student;
 
 // Function to display information about a student
-void present_student(struct Student *student) {
+void present_student(Student *student) {
     printf("->Name: %s\n", student->name);
     printf("->Age: %d\n", student->age);
     printf("->Gender: %s\n", student->gender);
@@ -29,11 +31,11 @@ void present_student(struct Student *student) {
 }
 
 // Array representing a class of students (20 max)
-struct Student class[20];
+Student class[20];
 int counter = 0;
 
 // Function to add student to the class
-void add_student(struct Student *student, int *counter) {
+void add_student(Student *student, int *counter) {
     class[*counter] = *student;
     (*counter)++;
 }
@@ -62,7 +64,7 @@ int main() {
     printf("Presenting Student\n");
     printf("------------------\n");
 
-    struct Student new_student = create_student(name, age, gender, class);
+    Student new_student = create_student(name, age, gender, class);
     present_student(&new_student);
 
     return 0;
