@@ -4,10 +4,10 @@ typedef enum {
     Ok,
     FileNotFound,
     AccessDenied
-} StatusCode;
+} Code;
 
 // Error-handling function
-void describe_status(StatusCode code) {
+void describe_status(Code code) {
     switch(code) {
         case Ok:
         printf("Result Ok: success!\n");
